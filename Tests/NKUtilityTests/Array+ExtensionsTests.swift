@@ -26,4 +26,10 @@ final class Array_ExtensionsTests: XCTestCase {
         let num1 = numbers[safeIndex: -1]
         XCTAssertNil(num1)
     }
+    
+    func test_isNotEmpty_validCheck() {
+        let numbers = [1,2,3,4]
+        let emptyStatus = numbers.isNotEmpty
+        XCTAssertTrue(emptyStatus)
+    }
 }
