@@ -21,4 +21,9 @@ final class Array_ExtensionsTests: XCTestCase {
         XCTAssertNil(num1)
     }
     
+    func test_safeIndex_withNegNilValue() {
+        let numbers = [1,2,3,4,5]
+        let num1 = numbers[safeIndex: -1]
+        XCTAssertNil(num1)
+    }
 }
